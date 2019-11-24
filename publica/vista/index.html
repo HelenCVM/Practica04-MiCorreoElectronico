@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href ="../../css/archivo.css" rel="stylesheet"/>
+    <script type="text/javascript" src="validacion_usuario.js"></script>
+    <style type="text/css">
+      .error {
+          color: red;
+          font-size: 8px;
+      }
+    </style>
+        
+    
+</head>
+
+<body>
+    <article class="about_tss">
+        <h1>Formulario</h1>
+          <form action="../../config/creacion_usuarios.php" method="post" onsubmit="return validarCampos()">
+                <label for="cedula">cedula:</label>
+                <input type="text" id="cedula" name="cedula" onkeyup="this.value=ValidarNumeros(this.value);this.value=ValidarCedula(this.value)"/>
+                <span id="mensajecedula" class ="error"></span>
+                <br>
+
+                  <label for="name">Nombres:</label>
+                  <input type="text" id="name" name="name" onkeyup="return validarLetras(this);this.value=dosPalabras(this.value)"/>
+                  <br>
+
+                  <label for="apellidos">Apellidos:</label>
+                  <input type="text" id="apellidos" name="apellidos" onkeyup="return validarLetras(this);this.value=dosPalabras(this.value)"/>
+                  
+                  <br>
+
+                  <label for="fecha">Fecha de nacimiento:</label>
+                  <input type="date" id="fecha" name="fecha"  onkeyup="return ValidarFecha();this.value=validarLetras(this.value)"/>
+                  <spam id="f" style="display: none;">ERROR</spam>
+                <br>
+
+                <label for="direccion">Direccion:</label>
+                <input type="text" id="dire" name="dire" />
+                <br>
+
+                  <label for="telefono">telefono:</label>
+                  <input type="text" id="telefono"name="telefono" maxlength="10" onkeyup="this.value=ValidarNumeros(this.value)" />
+                  <br>
+
+                  <label for="mail">E-mail:</label>
+                  <input type="email" id="mail" name="mail" onkeyup="return valdarCorreo();this.value=validarAlfa(this.value)"/>
+                  <spam id="e" style="display: none;">ERROR</spam>
+                  <br>
+
+                <label for="correo">Contraseña:</label>
+                <input type="password" id="contra" minlength="8" name="contra" />
+               
+                <br>
+                
+                  <input type="submit" id="crear" value="Aceptar" name="crear"/>
+                  <br>
+                  <input type="reset" id="cancelar" name="cancelar" name="cancelar" value="Cancelar" />
+                  <spam id="p" style="display: none;">Error, campos incompletos!</spam>
+                  <br>
+                  <a href="login.html">Loguearse</a>
+          </form>
+        </article>
+</body>
+</html>
