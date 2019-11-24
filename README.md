@@ -3,21 +3,21 @@ Practica04-MiCorreoElectronico
 
  
 
-\<!DOCTYPE html\>
+<!DOCTYPE html\>
 
-\<html\>
+<html\>
 
-\<head\>
+<head\>
 
-\<meta charset="UTF-8"\>
+<meta charset="UTF-8"\>
 
-\<title\>Iniciar sesión\</title\>
+<title\>Iniciar sesión\</title\>
 
-\<link href ="../../css/archivo.css" rel="stylesheet"/\>
+<link href ="../../css/archivo.css" rel="stylesheet"/\>
 
-\</head\>
+</head\>
 
-\<body\>
+<body\>
 
 \<form id="formulario01" method="POST" action="../controladores/login.php"\>
 
@@ -2886,3 +2886,11 @@ echo "\<p\>" . mysqli_error(\$conn) . "\</p\>";
 \</body\>
 
 \</html\>
+
+
+
+CONCLUSIONES:
+Con la realización de dicha práctica profundice conocimiento de PHP y HTML. Además de investigar más sobre las  funciones ,etiquetas de cada uno de los lenguajes.
+RECOMENDACIONES:
+Utilizar las practicas realizadas en clases
+
